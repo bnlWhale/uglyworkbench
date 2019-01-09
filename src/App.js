@@ -1,26 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './index.css';
+import ProductPage from './component/ProductPage'
+import {Route, NavLink, HashRouter} from 'react-router-dom'
+import HomePage from './component/HomePage'
+import ProductTablePage from './component/ProductTablePage'
+import ShoppingcartPage from './component/ShoppingcartPage'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+        <HashRouter>
+            <div>
+                <h1>Ugly work bench</h1>
+                <ul className="header">
+                    <li><NavLink exact to="/">Home</NavLink></li>
+                    <li><NavLink to="/product">Product</NavLink></li>
+                    <li><NavLink to="/producttable">Product table</NavLink></li>
+                    <li><NavLink to="/shppingcart">Shopping cart items</NavLink></li>
+                </ul>
+                <div className="content">
+                    <Route exact path="/" component={HomePage}/>
+                    <Route path="/product" component={ProductPage}/>
+                    <Route path="/producttable" component={ProductTablePage}/>
+                    <Route path="/shppingcart" component={ShoppingcartPage}/>
+                </div>
+            </div>
+        </HashRouter>
     );
   }
 }

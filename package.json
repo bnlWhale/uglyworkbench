@@ -3,9 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
+    "from": "^0.1.7",
+    "glyphicons-only-bootstrap": "^1.0.1",
+    "import": "^0.0.6",
+    "namor": "^1.1.1",
     "react": "^16.7.0",
+    "react-bootstrap": "^0.32.4",
     "react-dom": "^16.7.0",
-    "react-scripts": "2.1.2"
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.2",
+    "react-table": "^6.8.6"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,5 +29,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "proxy": "http://localhost:8080"
 }
